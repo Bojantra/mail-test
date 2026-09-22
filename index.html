@@ -55,7 +55,7 @@
 
   /* Mobile styles */
   @media screen and (max-width: 600px) {
-    .email-container { width: 100% !important; max-width: 100% !important; }
+    .email-container { width: 90% !important; max-width: 90% !important; }
     .fluid-img { width: 100% !important; height: auto !important; }
 
     .px-mobile { padding-left: 24px !important; padding-right: 24px !important; }
@@ -68,8 +68,8 @@
     .stack-column { display: block !important; width: 100% !important; max-width: 100% !important; box-sizing: border-box; padding: 0 0 28px 0 !important; }
     .stack-column:last-child { padding-bottom: 4px !important; }
 
-    .btn-table { width: 100% !important; }
-    .btn-link { width: 100% !important; box-sizing: border-box !important; }
+    .btn-table { width: 100% !important; margin-left: 0 !important; margin-right: 0 !important; }
+    .btn-link { width: 100% !important; box-sizing: border-box !important; text-align: center !important; }
   }
 </style>
 </head>
@@ -90,55 +90,37 @@
 
   <table role="presentation" class="email-container" width="100%" align="center" cellpadding="0" cellspacing="0" border="0" style="width:100%; max-width:600px; margin:0 auto; background-color:#FFFFFF;">
 
-    <!-- ============ HEADER + HERO (text overlaid on the image's built-in blank space) ============ -->
+    <!-- ============ HEADER + HERO (text sits above the image, not overlaid on it) ============ -->
     <tr>
-      <td style="padding:0; background-color:#FFFFFF; position:relative;">
+      <td align="center" class="px-mobile py-header" style="padding:48px 40px 0; background-color:#FFFFFF; text-align:center;">
 
-        <img src="https://raw.githubusercontent.com/Bojantra/mail-test/refs/heads/main/hero-full.jpg" width="600" alt="ServX app showing service categories and top providers" class="fluid-img" style="display:block; width:100%; height:auto;">
+        <img src="https://raw.githubusercontent.com/Bojantra/mail-test/refs/heads/main/logo.png" width="130" height="33" alt="ServX" style="display:block; margin:0 auto 28px; width:130px; max-width:130px; height:33px;">
 
-        <!--[if !mso]><!-->
-        <div class="overlay-text px-mobile py-header" style="position:absolute; top:0; left:0; width:100%; box-sizing:border-box; padding:48px 40px 0; text-align:center;">
+        <h1 class="headline" style="margin:0 0 16px; font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif; font-size:32px; line-height:38px; font-weight:800; color:#111318;">
+          Thank you for subscribing
+        </h1>
 
-          <img src="https://raw.githubusercontent.com/Bojantra/mail-test/refs/heads/main/logo.png" width="130" height="33" alt="ServX" style="display:block; margin:0 auto 28px; width:130px; max-width:130px; height:33px;">
+        <p class="subhead" style="margin:0 0 28px; font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif; font-size:16px; line-height:24px; color:#5B6472;">
+          You are on the list. ServX is bringing every home and business service into one app — and you will hear it from us first.
+        </p>
 
-          <h1 class="headline" style="margin:0 0 16px; font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif; font-size:32px; line-height:38px; font-weight:800; color:#111318;">
-            Thank you for subscribing
-          </h1>
-
-          <p class="subhead" style="margin:0 0 28px; font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif; font-size:16px; line-height:24px; color:#5B6472;">
-            You are on the list. ServX is bringing every home and business service into one app — and you will hear it from us first.
-          </p>
-
-          <!-- Bulletproof button -->
-          <table role="presentation" class="btn-table" cellpadding="0" cellspacing="0" border="0" style="margin:0 auto;">
-            <tr>
-              <td align="center" style="border-radius:26px; background-color:#00C2D6; background-image:linear-gradient(90deg, #00D6D6 0%, #00ABD6 100%);">
-                <a href="https://servx.mt/" target="_blank" class="btn-link" style="display:inline-block; padding:16px 40px; font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif; font-size:16px; font-weight:700; color:#FFFFFF; text-decoration:none; border-radius:26px;">
-                  Explore ServX &#8594;
-                </a>a
-              </td>
-            </tr>
-          </table>
-
-        </div>
-        <!--<![endif]-->
-
-        <!-- Outlook desktop fallback: VML/position:absolute isn't supported, so show the same content stacked below the image instead of overlaid -->
-        <!--[if mso]>
-        <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0">
-        <tr><td align="center" style="padding:24px 40px 40px;">
-          <img src="https://raw.githubusercontent.com/Bojantra/mail-test/refs/heads/main/logo.png" width="130" height="33" alt="ServX" style="display:block; margin:0 auto 28px;">
-          <h1 style="margin:0 0 16px; font-family:Arial,sans-serif; font-size:32px; line-height:38px; font-weight:800; color:#111318;">Thank you for subscribing</h1>
-          <p style="margin:0 0 28px; font-family:Arial,sans-serif; font-size:16px; line-height:24px; color:#5B6472;">You are on the list. ServX is bringing every home and business service into one app — and you will hear it from us first.</p>
-          <v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" href="{{SITE_URL}}" style="height:52px;v-text-anchor:middle;width:230px;" arcsize="50%" stroke="f" fillcolor="#00D6D6">
-          <v:fill type="gradient" angle="0" color="#00D6D6" color2="#00ABD6"/>
-          <w:anchorlock/>
-          <center style="color:#ffffff;font-family:Arial,sans-serif;font-size:16px;font-weight:bold;">Explore ServX &#8594;</center>
-          </v:roundrect>
-        </td></tr>
+        <!-- Bulletproof button -->
+        <table role="presentation" class="btn-table" cellpadding="0" cellspacing="0" border="0" style="margin:0 auto 40px;">
+          <tr>
+            <td align="center" style="border-radius:26px; background-color:#00C2D6; background-image:linear-gradient(90deg, #00D6D6 0%, #00ABD6 100%);">
+              <a href="https://servx.mt/" target="_blank" class="btn-link" style="display:inline-block; padding:16px 40px; font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif; font-size:16px; font-weight:700; color:#FFFFFF; text-decoration:none; border-radius:26px;">
+                Explore ServX &#8594;
+              </a>
+            </td>
+          </tr>
         </table>
-        <![endif]-->
 
+      </td>
+    </tr>
+
+    <tr>
+      <td style="padding:0; background-color:#FFFFFF;">
+        <img src="https://raw.githubusercontent.com/Bojantra/mail-test/9e5566ba0571b3d0083850a53a874fc3bdcff055/zzzz.png" width="600" alt="ServX app showing service categories and top providers" class="fluid-img" style="display:block; width:100%; height:auto;">
       </td>
     </tr>
 
